@@ -1,6 +1,6 @@
 const mongoose = require("mongoose")
 exports.DBconnect=()=>{
-     mongoose.connect("mongodb://127.0.0.1:27017/rent-app")
+     mongoose.connect(process.env.MONGO_URL)
     .then(() => {
       console.log("DB is Connected...");
     })

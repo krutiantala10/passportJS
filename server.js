@@ -3,7 +3,7 @@ const app = express()
 require("dotenv").config();
 const jwt = require('jsonwebtoken')
 // const path = require('path');
-const port = 8080;
+const port = process.env.PORT;
 
 const session = require('express-session')
 const{DBconnect}= require('./db/conn')
